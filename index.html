@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="func.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <style>
+        .container {
+            background-image: url('img/back.png');
+            border-radius: 3px 3px 3px 3px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .container h5 {
+            color:dimgrey;
+        }
+
+        .container h2 {
+            color: dimgrey;
+            text-shadow: 1px 1px 1px #000;
+            opacity: .9;
+        }
+
+        .results {
+            background-color: lightgrey;
+            border-radius: 3px 3px 3px 3px;
+            border-color: dimgrey;
+            font-size: 30px;
+            text-align: center;
+            opacity: .8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Exercícios estrutura sequencial de 1 a 25 - Eng. Software/ S.I Uni-Facef 2018</h2>
+        <h5>Aluno: Victor Sued - Cód 21223</h3>
+            <h5>Aluno: Ramon Luiz - Cód 21079</h3>
+                <h4>Exercício 01</h4>
+                <label class="enunciado">Faça um programa que receba 2 números, calcule e mostre a subtração do primeiro número pelo segundo.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex01_n1"
+                        placeholder="Insira o N1"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex01_n2"
+                        placeholder="Insira o N2"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex01()>Resolver</button>
+                        <button type="button" onclick=ex01_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex01_result" class="results"></div>
+
+
+                <h4>Exercício 02</h4>
+                <label class="enunciado">Faça um programa que receba 3 números, calcule e mostre a multiplicação desses números.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex02_n1"
+                        placeholder="Insira o N1"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex02_n2"
+                        placeholder="Insira o N2"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex02_n3"
+                        placeholder="Insira o N3"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex02()>Resolver</button>
+                        <button type="button" onclick=ex02_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex02_result" class="results"></div>
+
+
+                <h4>Exercício 03</h4>
+                <label class="enunciado">Faça um programa que receba 2 números, calcule e mostre a divisão desses númeross.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex03_n1"
+                        placeholder="Insira o N1"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex03_n2"
+                        placeholder="Insira o N2"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex03()>Resolver</button>
+                        <button type="button" onclick=ex03_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex03_result" class="results"></div>
+
+
+                <h4>Exercício 04</h4>
+                <label class="enunciado">Faça um programa que receba 2 notas, calcule e mostre a média ponderada dessas notas, considerando peso 2
+                    para a primeira nota e peso 3 para segunda nota.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex04_n1"
+                        placeholder="Insira o Nota 1"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex04_n2"
+                        placeholder="Insira o Nota 2"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex04()>Resolver</button>
+                        <button type="button" onclick=ex04_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex04_result" class="results"></div>
+
+
+                <h4>Exercício 05</h4>
+                <label class="enunciado">Faça um programa que receba o preço de um produto, calcule e mostre o novo valor com 10% de desconto.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex05_n1"
+                        placeholder="Insira o preço do produto"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex05()>Resolver</button>
+                        <button type="button" onclick=ex05_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex05_result" class="results"></div>
+
+
+                <h4>Exercício 06</h4>
+                <label class="enunciado">Um funcionário recebe um salário fixo mais 4%, faça um programa que receba o salário fixo de um funcionário
+                    e mostre o salário mais 4%.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex06_n1"
+                        placeholder="Insira o preço do produto"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex06()>Resolver</button>
+                        <button type="button" onclick=ex06_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex06_result" class="results"></div>
+
+
+                <h4>Exercício 07</h4>
+                <label class="enunciado">Faça um programa que receba o peso de uma pessoa, e mostre o peso novo se ela engordar 15% e o peso se emagrecer
+                    20%.
+                </label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex07_n1"
+                        placeholder="Insira o peso"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex07_n2"
+                        placeholder="Insira o peso"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex07()>Resolver</button>
+                        <button type="button" onclick=ex07_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex07_result" class="results"></div>
+
+
+                <h4>Exercício 08</h4>
+                <label class="enunciado">Faça um programa que receba o peso de uma pessoa em kilo e mostre em gramas.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex08_n1"
+                        placeholder="Insira o peso"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex08()>Resolver</button>
+                        <button type="button" onclick=ex08_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex08_result" class="results"></div>
+
+
+                <h4>Exercício 09</h4>
+                <label class="enunciado">Faça um programa que calcule e mostre a área de um trapézio.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex09_n1"
+                        placeholder="Insira a base maior"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex09_n2"
+                        placeholder="Insira a base menor"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex09_n3"
+                        placeholder="Insira a altura"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex09()>Resolver</button>
+                        <button type="button" onclick=ex09_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex09_result" class="results"></div>
+
+
+                <h4>Exercício 10</h4>
+                <label class="enunciado">Faça um programa que calcule e mostre a área de um quadrado.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex10_n1"
+                        placeholder="Insira lado a"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex10_n2"
+                        placeholder="Insira lado b"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex10()>Resolver</button>
+                        <button type="button" onclick=ex10_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex10_result" class="results"></div>
+
+
+                <h4>Exercício 11</h4>
+                <label class="enunciado">Faça um programa que calcule e mostre a área de um losango.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex11_n1"
+                        placeholder="Insira a diagonal maior"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex11_n2"
+                        placeholder="Insira a diagonal menor"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex11()>Resolver</button>
+                        <button type="button" onclick=ex11_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex11_result" class="results"></div>
+
+
+                <h4>Exercício 12</h4>
+                <label class="enunciado">Faça um programa que receba o valor do sário mínimo e o valor do salário de um funcionário, calcule e mostre
+                    a quantidade de salário minímo desse funcionário.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex12_n1"
+                        placeholder="Insira o valor do salário minímo"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex12_n2"
+                        placeholder="Insira o salário do funcionário"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex12()>Resolver</button>
+                        <button type="button" onclick=ex12_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex12_result" class="results"></div>
+
+
+                <h4>Exercício 13</h4>
+                <label class="enunciado">Faça um programa que calcule e mostre a tabuada de um número digitado pelo usuário.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex13_n1"
+                        placeholder="Insira o número para tabuada"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex13()>Resolver</button>
+                        <button type="button" onclick=ex13_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex13_result" class="results"></div>
+
+
+                <h4>Exercício 14</h4>
+                <label class="enunciado">Faça um programa que receba o ano de nascimento de uma pessoa calcule e mostre, idade em anos, meses, dias
+                    e semanas.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex14_n1"
+                        placeholder="Insira seu ano de nascimento"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex14()>Resolver</button>
+                        <button type="button" onclick=ex14_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex14_result" class="results"></div>
+
+
+                <h4>Exercício 15</h4>
+                <label class="enunciado">João recebeu o salário e precisa pagar duas contas atrasadas. João terá de pagar multa de 2% sobre cada conta.
+                    Faça um programa que calcule e mostre quanto resta do salário do João.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex15_n1"
+                        placeholder="Insira o salário do João"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex15_n2"
+                        placeholder="Insira o valor da conta 1"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex15_n3"
+                        placeholder="Insira o valor da conta 2"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex15()>Resolver</button>
+                        <button type="button" onclick=ex15_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex15_result" class="results"></div>
+
+                <h4>Exercício 16</h4>
+                <label class="enunciado">Faça um programa que receba o valor dos catetos de um triangulo calcule e mostre o valor da hipotenusa.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex16_n1"
+                        placeholder="Insira o lado a"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex16_n2"
+                        placeholder="Insira o lado b"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex16()>Resolver</button>
+                        <button type="button" onclick=ex16_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex16_result" class="results"></div>
+
+                <h4>Exercício 17</h4>
+                <label class="enunciado">Faça um programa que receba o raio e mostre.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex17_n1"
+                        placeholder="Insira o raio"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex17()>Resolver</button>
+                        <button type="button" onclick=ex17_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex17_result" class="results"></div>
+
+
+                <h4>Exercício 18</h4>
+                <label class="enunciado">Faça um programa que receba uma temperatura em Celsius, calcule e mostre essa temperatura em Fahrenheit.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex18_n1"
+                        placeholder="Insira o Celsius"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex18()>Resolver</button>
+                        <button type="button" onclick=ex18_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex18_result" class="results"></div>
+
+
+                <h4>Exercício 19</h4>
+                <label class="enunciado">Para iluminar corrtamente os comodos de uma casa, para cada m² deve-se usar 18W de potência. Faça um programa
+                    que receba as duas dimensões de um comodo (em metros), calcule e mostre a sua área (em m²) e a potência
+                    de iluminação que deverá ser utilizada.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex19_n1"
+                        placeholder="Insira o lado a"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex19_n2"
+                        placeholder="Insira o lado b"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex19()>Resolver</button>
+                        <button type="button" onclick=ex19_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex19_result" class="results"></div>
+
+                <h4>Exercício 20</h4>
+                <label class="enunciado">Programa que receba a medida do ângulo formado por uma escada apoiada no chão e a distância que a escada
+                    está da parede. Calcule e moestre a medida da escada para que se possa alcançar a ponta da escada.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex20_n1"
+                        placeholder="Insira o angulo"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex20_n2"
+                        placeholder="Insira a distância"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex20()>Resolver</button>
+                        <button type="button" onclick=ex20_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex20_result" class="results"></div>
+
+                <h4>Exercício 21</h4>
+                <label class="enunciado">Faça um programa que receba o número de horas trabalhadas, o valor do salário minimo, e o número do de horas
+                    extras trabalhadas. Calcule e mostre o salário a receber.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex21_n1"
+                        placeholder="Insira suas horas trabalhadas"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex21_n2"
+                        placeholder="Insira o seu salário"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex21_n2"
+                        placeholder="Insira a hora extra"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex21()>Resolver</button>
+                        <button type="button" onclick=ex21_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex21_result" class="results"></div>
+
+                <h4>Exercício 22</h4>
+                <label class="enunciado">Faça um programa que receba o número de lados de um polígono convexo, calcule e mostre o número de diagonais
+                    desse polígono, onde N é o número de lados do polígono.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex22_n1"
+                        placeholder="Insira o número de lados"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex22()>Resolver</button>
+                        <button type="button" onclick=ex22_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex22_result" class="results"></div>
+
+                <h4>Exercício 23</h4>
+                <label class="enunciado">Faça um programa que receba a medida de dois angulos de um triangulo calcule e mostre a medida do 3 angulo.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex23_n1"
+                        placeholder="Insira o ângulo"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex23_n2"
+                        placeholder="Insira o ângulo"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex23()>Resolver</button>
+                        <button type="button" onclick=ex23_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex23_result" class="results"></div>
+
+                <h4>Exercício 24</h4>
+                <label class="enunciado">Faça um programa que receba a quantidade de dinheiro em reais que uma pessoa que vai viajar possui. Essa
+                    pessoa vai passar por vários países e precisa converter seu dinheiro, para dólar, marco alemão e libra
+                    esterlina.
+                </label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex24_n1"
+                        placeholder="Insira o número de lados"></input>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex24()>Resolver</button>
+                        <button type="button" onclick=ex24_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex24_result" class="results"></div>
+
+                <h4>Exercício 25</h4>
+                <label class="enunciado">Faça um programa que receba uma hora, calcule e mostre a hora digitada em minutos, total dos minutos + os
+                    minutos digitados + conversão anterior e total dos minutos convertidos em segundos.</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex25_n1"
+                        placeholder="Insira a hora"></input>
+                    <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ex25_n2"
+                        placeholder="Insira os minutos"></input>
+
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" onclick=ex25()>Resolver</button>
+                        <button type="button" onclick=ex25_clean() class="btn btn-danger">Limpar</button>
+                    </span>
+                </div>
+                <div id="ex25_result" class="results"></div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>
